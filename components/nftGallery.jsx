@@ -18,12 +18,12 @@ export default function NFTGallery({}) {
     setPageKey()
     switch (e.target.value) {
       case "wallet":
-        setWalletOrCollectionAddress("vitalik.eth");
+        setWalletOrCollectionAddress("0x9e513816d71055ff78091B2ac3707466Aa4b4273");
 
         break;
       case "collection":
         setWalletOrCollectionAddress(
-          "0x8a90CAb2b38dba80c64b7734e58Ee1dB38B8992e"
+          "0x143728DCA5F666E3f899958CEa8F08866AC12CCa"
         );
         break;
       case "connectedWallet":
@@ -110,10 +110,11 @@ export default function NFTGallery({}) {
                 }}
                 defaultValue={process.env.ALCHEMY_NETWORK}
               >
+		<option value={"MATIC_MUMBAI"}>Mumbai</option>
                 <option value={"ETH_MAINNET"}>Mainnet</option>
                 <option value={"MATIC_MAINNET"}>Polygon</option>
                 <option value={"ETH_GOERLI"}>Goerli</option>
-                <option value={"MATIC_MUMBAI"}>Mumbai</option>
+                
               </select>
             </div>
             <div onClick={() => fetchNFTs()} className={styles.button_black}>
